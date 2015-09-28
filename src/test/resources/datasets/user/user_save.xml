@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<dataset>
+    <user
+          first_name="张三" last_name="张"
+          gender="男"
+          city="北京"/>
+
+    <user
+          first_name="李四" last_name="思"
+          gender="男"
+          city="上海"/>
+
+    <user
+          first_name="王五" last_name="王"
+          gender="女"
+          city="邯郸"/>
+    <user
+          first_name="麻溜" last_name="admin"
+          gender="fa"
+          city="chang"/>
+</dataset>

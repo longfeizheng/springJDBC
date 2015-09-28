@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<dataset>
+    <auth_user
+               username="张三" passwd="12"
+               role="1"
+               status="1"/>
+
+    <auth_user
+               username="李四" passwd="12"
+               role="1"
+               status="0"/>
+
+    <auth_user
+               username="王五" passwd="12"
+               role="1"
+               status="0"/>
+    <auth_user
+               username="admin" passwd="admin"
+               role="1"
+               status="1"/>
+</dataset>

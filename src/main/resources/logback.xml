@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2015 China Telecom System Integration Co., Ltd.
+  ~ All rights reserved.
+  -->
+
+<configuration>
+
+    <!-- always a good activate OnConsoleStatusListener -->
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{HH:mm:ss}][%level][%-15logger{0}][%-3L][%X{SeqID}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <!--&lt;!&ndash;设置包com.merry的日志级别,-->
+<!--设置是否也打印一份到它的父logger（这里是root）设置的appender里&ndash;&gt;-->
+    <!--<logger name="com.merryyou.controller" level="INFO" additivity="false">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+    <!--&lt;!&ndash;设置包com.merry.test的日志级别&ndash;&gt;-->
+    <!--<logger name="com.merryyou.dao" level="ERROR" />-->
+</configuration>
