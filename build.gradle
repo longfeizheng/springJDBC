@@ -90,7 +90,7 @@ dependencies {
 
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.1'
     compile 'com.fasterxml.jackson.core:jackson-core:2.4.1'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.1.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
 
     compile 'taglibs:standard:1.1.2'
     //apache

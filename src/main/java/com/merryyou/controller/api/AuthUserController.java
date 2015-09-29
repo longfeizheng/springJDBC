@@ -5,7 +5,6 @@ import com.merryyou.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -23,11 +22,9 @@ public class AuthUserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/list",method = RequestMethod.GET,produces={ "application/xml","application/json"})
-    @ResponseBody
-    public Object list() throws Exception{
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
+    public List<User> list() throws Exception{
         List<User> userList = userService.getUserList();
-        System.out.print("*****************");
         return userList;
     }
 }

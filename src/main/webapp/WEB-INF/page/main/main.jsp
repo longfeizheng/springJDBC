@@ -21,7 +21,7 @@
                 contentType:"application/json",
                 success: function (data) {
                     $('#example').DataTable({
-                        //"ajax": txt1
+                        "ajax": data
                     });
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
