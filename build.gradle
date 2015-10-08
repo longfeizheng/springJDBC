@@ -66,6 +66,17 @@ dependencies {
     compile 'com.google.guava:guava:18.0'
     compile 'org.apache.commons:commons-lang3:3.4'
     compile 'commons-beanutils:commons-beanutils:1.9.2'
+
+    // the Cache libraries.
+    compile "redis.clients:jedis:2.6.3"
+    compile "org.springframework.data:spring-data-commons:1.10.2.RELEASE"
+    compile "org.springframework.data:spring-data-redis:1.5.2.RELEASE"
+
+    compile "org.apache.commons:commons-pool2:2.4.2"
+    compile "org.springframework.session:spring-session:1.0.2.RELEASE"
+    compile("org.springframework.session:spring-session-data-redis:1.0.2.RELEASE") {
+        transitive = false
+    }
     // test libraries
     compile "org.uncommons:reportng:1.1.4"
     compile("junit:junit:4.12") {

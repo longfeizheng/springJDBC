@@ -46,7 +46,7 @@ public class LoginWebController {
             logger.info("welecome main page");
         } else {
             //如果不为空，则直接跳转到主界面
-            mav.setViewName("main/login");
+            mav.setViewName("main/main");
             logger.info("welecome login page");
         }
         return mav;
