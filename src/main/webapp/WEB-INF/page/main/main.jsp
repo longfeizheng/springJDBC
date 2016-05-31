@@ -20,8 +20,10 @@
                 dataType: "json",
                 contentType:"application/json",
                 success: function (data) {
+                    var str=data.data.toString();
+                    alert(str.replace("{","[").replace("}","]"));
                     $('#example').DataTable({
-                        "ajax": data
+                       // "ajax": data
                     });
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {

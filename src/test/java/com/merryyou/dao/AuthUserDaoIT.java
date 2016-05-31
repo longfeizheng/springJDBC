@@ -52,6 +52,7 @@ public class AuthUserDaoIT extends AbstractTransactionalSpringExtendedTest {
         Iterable<AuthUser> results = authUserDao.findAll(new Sort("id"));
 
         assertThat(results, notNullValue());
+
         assertThat(Iterables.size(results), is(3));
     }
 

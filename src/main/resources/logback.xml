@@ -4,7 +4,8 @@
   ~ All rights reserved.
   -->
 
-<configuration>
+<configuration scan="true">
+
 
     <!-- always a good activate OnConsoleStatusListener -->
     <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
@@ -19,11 +20,20 @@
         </encoder>
     </appender>
 
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>log/springjdbc.log</file>
+    <append>true</append><!-- 日志追加 -->
+    <encoder>
+        <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+        </pattern>
+    </encoder>
+    </appender>
     <!-- To enable JMX Management -->
     <jmxConfigurator/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
     </root>
     <!--&lt;!&ndash;设置包com.merry的日志级别,-->
 <!--设置是否也打印一份到它的父logger（这里是root）设置的appender里&ndash;&gt;-->

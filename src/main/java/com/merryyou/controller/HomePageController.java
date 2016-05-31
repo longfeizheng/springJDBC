@@ -46,10 +46,10 @@ public class HomePageController {
     }
 
     @RequestMapping("/insert")
-    public String inserData(@ModelAttribute User user) {
+    public ModelAndView inserData(@ModelAttribute User user) {
         if (user != null)
             userService.insertData(user);
-        return "redirect:/getList";
+        return new ModelAndView("redirect:/getList");
     }
 
     @RequestMapping("/getList")
@@ -87,16 +87,16 @@ public class HomePageController {
     }
 
     @RequestMapping("/update")
-    public String updateUser(@ModelAttribute User user) {
+    public ModelAndView updateUser(@ModelAttribute User user) {
         userService.updateData(user);
-        return "redirect:/getList";
+        return new ModelAndView("redirect:/getList");
 
     }
 
     @RequestMapping("/delete")
-    public String deleteUser(@RequestParam String id) {
+    public ModelAndView deleteUser(@RequestParam String id) {
         userService.deleteData(id);
-        return "redirect:/getList";
+        return new ModelAndView("redirect:/getList");
     }
     @RequestMapping("/list")
     public void list(HttpServletResponse response) throws Exception{

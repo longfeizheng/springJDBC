@@ -32,7 +32,9 @@ td {
 <body>
 	<center>
 		<br /> <br /> <br /> <b>User
-			List | Being Java Guys </b><br /> <br />
+			List | Being Java Guys </b><br />
+		${pageContext.session.id}
+		<br />
 			
 		
 
@@ -57,7 +59,7 @@ td {
 					<td><a href="delete?id=${user.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
-			<tr><td colspan="7"><a href="register">Add New User</a></td></tr>
+			<tr><td colspan="7"><a href="register1">Add New User</a></td></tr>
 		</table>
 
 	</center>

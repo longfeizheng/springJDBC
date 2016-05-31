@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created on 2015/9/24 0024.
@@ -23,8 +25,10 @@ public class AuthUserController {
     private UserService userService;
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public List<User> list() throws Exception{
+    public Map list() throws Exception{
+        Map map=new HashMap<>();
         List<User> userList = userService.getUserList();
-        return userList;
+        map.put("data",userList);
+        return map;
     }
 }

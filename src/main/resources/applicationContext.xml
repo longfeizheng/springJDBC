@@ -10,6 +10,7 @@
 	<!-- 加载类路径（classpath：）下的属性文件 -->
 	<context:property-placeholder location="classpath:jdbc.properties" />
 
+
 	<!-- 开启注解，采用注解的方式 -->
 	<context:annotation-config />
 	<!--  扫描 com.merryyou包下的带注解的组件 -->
@@ -46,4 +47,5 @@
 
 	<!-- 开启事物注解 -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<import resource="spring-redis.xml"/>
 </beans>

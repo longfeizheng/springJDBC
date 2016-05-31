@@ -31,7 +31,9 @@ td {
 </head>
 <body>
 	<center>
-		<br /> <br /> <br /> <b>Edit User Details </b><br /> <br />
+		<br /> <br /> <br /> <b>Edit User Details </b><br />
+		${pageContext.session.id}
+		<br />
 		<div>
 			<form:form method="post" action="update" modelAttribute="user">
 				<table>

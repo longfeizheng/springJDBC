@@ -31,7 +31,9 @@ td {
 </head>
 <body>
 	<center>
-		<br /> <br /> <br /> <b>Being Java Guys | Registration Form </b> <br />
+		<br /> <br /> <br /> <b>Being Java Guys | Registration Form </b>
+		${pageContext.session.id}
+		<br />
 		<br />
 		<div>
 			<form:form method="post" action="insert" modelAttribute="user">

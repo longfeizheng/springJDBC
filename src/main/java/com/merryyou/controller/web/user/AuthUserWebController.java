@@ -20,9 +20,9 @@ public class AuthUserWebController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/user",method = RequestMethod.GET,produces={"application/xml", "application/json"})
-    public User test(){
-        User user=new User();
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public User test() {
+        User user = new User();
         user.setFirstName("admin");
         user.setLastName("admin");
         user.setCity("beijing");
