@@ -6,7 +6,7 @@ package com.merryyou.designpatterns.proxy;
  * @author zlf
  * @since 1.0
  */
-public class Source implements Sourceable {
+public class SourceableImpl implements Sourceable {
     @Override
     public void method() {
         System.out.println("this original method");

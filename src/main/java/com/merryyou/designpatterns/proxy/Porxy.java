@@ -8,11 +8,11 @@ package com.merryyou.designpatterns.proxy;
  */
 public class Porxy implements Sourceable {
 
-    private Source source;
+    private SourceableImpl source;
 
     public Porxy() {
         super();
-        this.source = new Source();
+        this.source = new SourceableImpl();
     }
 
     @Override
