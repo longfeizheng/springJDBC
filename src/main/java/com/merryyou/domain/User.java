@@ -1,6 +1,10 @@
 package com.merryyou.domain;
 
 import com.merryyou.db.BaseEntity;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Arrays;
+import java.util.Date;
 
 public class User extends BaseEntity<Integer> {
 
@@ -10,6 +14,41 @@ public class User extends BaseEntity<Integer> {
 	private String lastName;
 	private String gender;
 	private String city;
+
+	private String startDate;
+	@DateTimeFormat( pattern = "yyyy-MM-dd" )
+	private Date endDate;
+
+	@DateTimeFormat( pattern = "yyyy-MM-dd" )
+	private Date[] rangeTime;
+
+	public Date[] getRangeTime() {
+		return rangeTime;
+	}
+
+	public void setRangeTime(Date[] rangeTime) {
+		this.rangeTime = rangeTime;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -41,5 +80,18 @@ public class User extends BaseEntity<Integer> {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", gender='" + gender + '\'' +
+				", city='" + city + '\'' +
+				", startDate='" + startDate + '\'' +
+				", endDate=" + endDate +
+				", rangeTime=" + Arrays.toString(rangeTime) +
+				'}';
 	}
 }

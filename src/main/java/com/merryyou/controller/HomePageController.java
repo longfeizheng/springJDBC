@@ -1,22 +1,18 @@
 package com.merryyou.controller;
 
+import com.google.gson.Gson;
 import com.merryyou.domain.User;
 import com.merryyou.service.UserService;
 import net.minidev.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 public class HomePageController {
@@ -88,8 +84,25 @@ public class HomePageController {
 
     @RequestMapping("/update")
     public ModelAndView updateUser(@ModelAttribute User user) {
-        userService.updateData(user);
+        System.out.println(user.toString());
+        Date date = new Date(user.getStartDate().split(",")[0]);
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sd.format(date));
+//        userService.updateData(user);
         return new ModelAndView("redirect:/getList");
+
+    }
+
+    @RequestMapping(value = "/updatetest" ,method = RequestMethod.POST)
+    public String updateUsertest(@RequestBody User user) {
+        System.out.println(user.toString());
+        System.out.println(user.getRangeTime()[0]);
+        Date date = new Date(user.getStartDate().split(",")[0]);
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sd.format(date));
+        System.out.println(new Gson().toJson(user));
+//        userService.updateData(user);
+        return null;
 
     }
 

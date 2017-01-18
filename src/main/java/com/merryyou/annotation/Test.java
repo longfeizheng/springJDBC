@@ -7,7 +7,9 @@ package com.merryyou.annotation;
  * @since 1.0
  */
 public class Test {
+    static int i;
+    static Integer j;
     public static void main(String[] args) {
-
+        System.out.println(i+".................."+j);
     }
 }
