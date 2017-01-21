@@ -1,5 +1,5 @@
 # springJDBC
 Spring + SpringMVC + SpringJDBC
 
-(*^__^*) 嘻嘻……
-
+(*^__^*)
+1月21日
