@@ -1,2 +1,2 @@
-# springJDBC Demo
+# springJDBC 
 Spring + SpringMVC + SpringJDBC
