@@ -1,4 +1,4 @@
 # springJDBC 
 Spring + SpringMVC + SpringJDBC
 
-好像不能用啊
+好像不能用啦
