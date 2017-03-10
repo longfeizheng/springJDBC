@@ -1,4 +1,4 @@
 # springJDBC 
 Spring + SpringMVC + SpringJDBC
 
-已废弃
+已废弃o(╯□╰)o
